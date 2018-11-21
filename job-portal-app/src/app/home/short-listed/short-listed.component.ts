@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SHORT_LISTED_HEADER } from '../data/short-listed.data';
+
 
 @Component({
   selector: 'app-short-listed',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./short-listed.component.scss']
 })
 export class ShortListedComponent implements OnInit {
+  @Input() dataSource;
+  @Input() displayedColumns = SHORT_LISTED_HEADER;
 
   constructor() { }
 
