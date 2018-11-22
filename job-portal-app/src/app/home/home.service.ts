@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of, BehaviorSubject } from 'rxjs';
 
 import { POSTED_JOBS_DATA } from './data/posted-jobs.data';
 import { INTERVIEWS_DATA } from './data/interview.data';
@@ -14,10 +14,20 @@ import { Interviews } from './../common/interfaces/interviews.interface';
   providedIn: 'root'
 })
 export class HomeService {
+  public postedJobSource = new BehaviorSubject(POSTED_JOBS_DATA);
+  postedJobObservable$ = this.postedJobSource.asObservable();
 
   constructor(private _http: HttpClient) { }
 
+  updatePostedJobsTable(postedJobs: PostedJobs[]) {
+    this.postedJobSource.next(postedJobs);
+  }
+
   public getPostedJobsData(): Observable<PostedJobs[]> {
+    return this.postedJobSource;
+  }
+
+  public getAllPostedJobsData(): Observable<PostedJobs[]> {
     return of(POSTED_JOBS_DATA);
   }
 
