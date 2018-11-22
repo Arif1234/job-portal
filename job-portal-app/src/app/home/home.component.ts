@@ -3,7 +3,6 @@ import { HomeService } from './home.service';
 import { PostedJobs } from '../common/interfaces/posted-jobs.interface';
 import { ShortListed } from './../common/interfaces/short-listed.interface';
 import { Interviews } from './../common/interfaces/interviews.interface';
-import { GenericData } from './../common/interfaces/generic-data.interface';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +10,9 @@ import { GenericData } from './../common/interfaces/generic-data.interface';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public postedJobsData: GenericData[];
-  public shortListedData: GenericData[];
-  public interviewsData: GenericData[];
+  public postedJobsData: PostedJobs[];
+  public shortListedData: ShortListed[];
+  public interviewsData: Interviews[];
 
   constructor(private homeService: HomeService) { }
 

@@ -1,9 +1,8 @@
 import { Interviews } from './../../common/interfaces/interviews.interface';
-import { GenericData } from './../../common/interfaces/generic-data.interface';
 
-export const INTERVIEWS_DATA: GenericData[] = [
-    { column1: 'Round#1', column2: 'Vijay', column3: '20-8-13', column4: 'Selected' },
-    { column1: 'HR Round', column2: 'Singh, HR', column3: '27-8-13', column4: 'Offered' }
+export const INTERVIEWS_DATA: Interviews[] = [
+    { interview: 'Round#1', interviewer: 'Vijay', date: '20-8-13', result: 'Selected' },
+    { interview: 'HR Round', interviewer: 'Singh, HR', date: '27-8-13', result: 'Offered' }
 ];
 
 export const INTERVIEWS_HEADER: string[] = [

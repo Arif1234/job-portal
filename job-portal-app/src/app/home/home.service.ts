@@ -6,7 +6,6 @@ import { POSTED_JOBS_DATA } from './data/posted-jobs.data';
 import { INTERVIEWS_DATA } from './data/interview.data';
 import { SHORT_LISTED_DATA } from './data/short-listed.data';
 
-import { GenericData } from './../common/interfaces/generic-data.interface';
 import { PostedJobs } from './../common/interfaces/posted-jobs.interface';
 import { ShortListed } from './../common/interfaces/short-listed.interface';
 import { Interviews } from './../common/interfaces/interviews.interface';
@@ -18,15 +17,15 @@ export class HomeService {
 
   constructor(private _http: HttpClient) { }
 
-  public getPostedJobsData(): Observable<GenericData[]> {
+  public getPostedJobsData(): Observable<PostedJobs[]> {
     return of(POSTED_JOBS_DATA);
   }
 
-  public getShortListedData(): Observable<GenericData[]> {
+  public getShortListedData(): Observable<ShortListed[]> {
     return of(SHORT_LISTED_DATA);
   }
 
-  public getInterviewsData(): Observable<GenericData[]> {
+  public getInterviewsData(): Observable<Interviews[]> {
     return of(INTERVIEWS_DATA);
   }
 }
