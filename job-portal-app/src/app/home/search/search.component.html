@@ -1,6 +1,6 @@
 <section class="search-section">
-  <mat-checkbox class="example-margin" [(ngModel)]="open">open</mat-checkbox>
-  <mat-checkbox class="example-margin" [(ngModel)]="closed">closed</mat-checkbox>
+  <mat-checkbox class="example-margin" (change)="getOpenStatus()" [(ngModel)]="open">open</mat-checkbox>
+  <mat-checkbox class="example-margin" (change)="getClosedStatus()" [(ngModel)]="closed">closed</mat-checkbox>
   <mat-form-field class="example-margin">
     <input matInput placeholder="Enter Title">
   </mat-form-field>

@@ -12,4 +12,11 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
+  getOpenStatus() {
+    console.log('Open Status');
+  }
+
+  getClosedStatus() {
+    console.log('Closed Status');
+  }
 }
