@@ -4,6 +4,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AppMaterialModule } from './../app-material/app-material.module';
 import { CommonComponentModule } from './../common/common-component.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HomeComponent } from './home.component';
 import { PostedJobsComponent } from './posted-jobs/posted-jobs.component';
@@ -24,7 +25,8 @@ import { SearchComponent } from './search/search.component';
     HomeRoutingModule,
     CommonComponentModule,
     AppMaterialModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule
   ],
   exports: [
     HomeComponent

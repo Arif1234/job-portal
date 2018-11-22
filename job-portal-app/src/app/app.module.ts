@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // User Defined modules
 import { GlobalModule } from './global/global.module';
@@ -26,7 +27,8 @@ import { CommonComponentModule } from './common/common-component.module';
     HomeModule,
     AppMaterialModule,
     BrowserAnimationsModule,
-    CommonComponentModule
+    CommonComponentModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

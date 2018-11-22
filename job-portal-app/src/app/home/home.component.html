@@ -1,4 +1,15 @@
 <app-search></app-search>
 <app-posted-jobs [dataSource]="postedJobsData"></app-posted-jobs>
-<app-short-listed [dataSource]="shortListedData"></app-short-listed>
-<app-interviews [dataSource]="interviewsData"></app-interviews>
+<div class="container"
+    fxLayout
+    fxLayout.md="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0">
+    <div fxFlex="50%">
+        <app-short-listed [dataSource]="shortListedData"></app-short-listed>
+    </div>
+    <div fxFlex="50%">
+        <app-interviews [dataSource]="interviewsData"></app-interviews>
+    </div>
+</div>
