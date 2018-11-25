@@ -2,9 +2,6 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "paths": {
-      "@interfaces/*": ["src/app/common/interfaces/*"]
-    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
