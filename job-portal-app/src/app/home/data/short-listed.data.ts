@@ -1,4 +1,4 @@
-import { ShortListed } from './../../common/interfaces/short-listed.interface';
+import { ShortListed } from '@interfaces/short-listed.interface';
 
 export const SHORT_LISTED_DATA: ShortListed[] = [
     { name: 'Raju', worksAt: 'PLM Inc', experience: '6 yrs', ctc: '10L' },

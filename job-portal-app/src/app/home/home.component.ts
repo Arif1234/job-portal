@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './home.service';
-import { PostedJobs } from '../common/interfaces/posted-jobs.interface';
-import { ShortListed } from './../common/interfaces/short-listed.interface';
-import { Interviews } from './../common/interfaces/interviews.interface';
+import { PostedJobs } from '@interfaces/posted-jobs.interface';
+import { ShortListed } from '@interfaces/short-listed.interface';
+import { Interviews } from '@interfaces/interviews.interface';
 
 @Component({
   selector: 'app-home',

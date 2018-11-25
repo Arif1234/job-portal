@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { INTERVIEWS_HEADER } from './../data/interview.data';
 
-import { Interviews } from './../../common/interfaces/interviews.interface';
+import { Interviews } from '@interfaces/interviews.interface';
 
 @Component({
   selector: 'app-interviews',

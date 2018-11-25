@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SHORT_LISTED_HEADER } from '../data/short-listed.data';
-import { ShortListed } from 'src/app/common/interfaces/short-listed.interface';
+import { ShortListed } from '@interfaces/short-listed.interface';
 
 @Component({
   selector: 'app-short-listed',

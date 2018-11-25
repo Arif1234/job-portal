@@ -1,4 +1,4 @@
-import { PostedJobs } from './../../common/interfaces/posted-jobs.interface';
+import { PostedJobs } from '@interfaces/posted-jobs.interface';
 
 export const POSTED_JOBS_DATA: PostedJobs[] = [
     { company: 'IT Soft', title: 'Java Engg', date: '20-8-13', status: 'Open' },

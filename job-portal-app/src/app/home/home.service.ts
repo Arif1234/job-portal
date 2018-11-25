@@ -6,9 +6,9 @@ import { POSTED_JOBS_DATA } from './data/posted-jobs.data';
 import { INTERVIEWS_DATA } from './data/interview.data';
 import { SHORT_LISTED_DATA } from './data/short-listed.data';
 
-import { PostedJobs } from './../common/interfaces/posted-jobs.interface';
-import { ShortListed } from './../common/interfaces/short-listed.interface';
-import { Interviews } from './../common/interfaces/interviews.interface';
+import { PostedJobs } from '@interfaces/posted-jobs.interface';
+import { ShortListed } from '@interfaces/short-listed.interface';
+import { Interviews } from '@interfaces/interviews.interface';
 
 @Injectable({
   providedIn: 'root'

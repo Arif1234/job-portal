@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { POSTED_JOBS_HEADER } from './../data/posted-jobs.data';
-import { PostedJobs } from './../../common/interfaces/posted-jobs.interface';
+import { PostedJobs } from '@interfaces/posted-jobs.interface';
 
 @Component({
   selector: 'app-posted-jobs',

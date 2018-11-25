@@ -1,4 +1,4 @@
-import { Interviews } from './../../common/interfaces/interviews.interface';
+import { Interviews } from '@interfaces/interviews.interface';
 
 export const INTERVIEWS_DATA: Interviews[] = [
     { interview: 'Round#1', interviewer: 'Vijay', date: '20-8-13', result: 'Selected' },
