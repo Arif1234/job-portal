@@ -16,4 +16,7 @@ export class ShortListedComponent implements OnInit {
   ngOnInit() {
   }
 
+  interviewDetails(row) {
+    alert('Find interview details for candidate: ' + row.name);
+  }
 }

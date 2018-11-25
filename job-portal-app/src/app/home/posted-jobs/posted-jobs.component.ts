@@ -16,4 +16,8 @@ export class PostedJobsComponent implements OnInit {
   ngOnInit() {
   }
 
+  shortListedCandidate(row) {
+    alert('Find shortlisted candidates for company: ' + row.company);
+  }
+
 }
