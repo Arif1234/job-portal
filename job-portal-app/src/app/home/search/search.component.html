@@ -1,10 +1,9 @@
 <section class="search-section">
-  <mat-radio-button class="example-margin" (change)="getOpenStatus()" [(ngModel)]="open">open</mat-radio-button>
-  <mat-radio-button class="example-margin" (change)="getClosedStatus()" [(ngModel)]="closed">closed</mat-radio-button>
-  <mat-radio-button class="example-margin" (change)="getAllJobsStatus()" [(ngModel)]="all">All</mat-radio-button>
-  <!-- TODO: Build search functionality -->
-  <!-- <mat-form-field class="example-margin">
-    <input matInput placeholder="Enter Title">
+  <mat-radio-button class="example-margin" (change)="getOpenStatus()">open</mat-radio-button>
+  <mat-radio-button class="example-margin" (change)="getClosedStatus()">closed</mat-radio-button>
+  <mat-radio-button class="example-margin" (change)="getAllJobsStatus()">All</mat-radio-button>
+  <mat-form-field class="example-margin">
+    <input matInput [(ngModel)]="searchParam" placeholder="Enter Title">
   </mat-form-field>
-  <button class="example-margin" mat-button mat-raised-button>Search</button> -->
+  <button class="example-margin" (click)='searchTitle()' mat-button mat-raised-button>Search</button>
 </section>
