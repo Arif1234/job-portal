@@ -4,4 +4,8 @@
     .example-margin {
         margin: 0 10px;
     }
+
+    ::ng-deep .mat-form-field-infix {
+        border: 0;
+    }
 }

@@ -1,7 +1,10 @@
+import { AppMaterialModule } from './../app-material/app-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TableComponent } from './table/table.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material';
+
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -9,7 +12,10 @@ import { MatTableModule } from '@angular/material';
   ],
   imports: [
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppMaterialModule
   ],
   exports: [
     TableComponent

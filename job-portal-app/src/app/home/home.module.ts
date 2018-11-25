@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from './../app-material/app-material.module';
 import { CommonComponentModule } from './../common/common-component.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -26,6 +26,7 @@ import { SearchComponent } from './search/search.component';
     CommonComponentModule,
     AppMaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule
   ],
   exports: [

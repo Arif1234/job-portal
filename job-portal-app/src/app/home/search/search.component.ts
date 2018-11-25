@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { HomeService } from './../home.service';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search',
@@ -11,11 +14,27 @@ export class SearchComponent implements OnInit {
   public postedJobsData: any;
   public allPostedJobs: any;
   public searchParam: string;
+  myControl = new FormControl();
+  options: string[] = [];
+  filteredOptions: Observable<string[]>;
 
   constructor(private _homeService: HomeService) { }
 
   ngOnInit() {
-    this._homeService.postedJobObservable$.subscribe(data => this.postedJobsData = data);
+    this._homeService.getAllPostedJobsData().subscribe(data => this.allPostedJobs = data);
+    this.allPostedJobs.map(data => this.options.push(data.title));
+
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
   getOpenStatus() {
@@ -35,9 +54,9 @@ export class SearchComponent implements OnInit {
     this._homeService.updatePostedJobsTable(this.allPostedJobs);
   }
 
-  searchTitle() {
+  searchByTitle() {
     this._homeService.getAllPostedJobsData().subscribe(data => this.allPostedJobs = data);
-    this.result = this.allPostedJobs.filter(data => data.title === this.searchParam);
+    this.result = this.allPostedJobs.filter(data => data.title === this.myControl.value);
     this._homeService.updatePostedJobsTable(this.result);
   }
 }
