@@ -5,10 +5,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material';
 
 import { TableComponent } from './table/table.component';
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
   declarations: [
-    TableComponent
+    TableComponent,
+    IconComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { TableComponent } from './table/table.component';
     AppMaterialModule
   ],
   exports: [
-    TableComponent
+    TableComponent,
+    IconComponent
   ]
 })
 export class CommonComponentModule { }
